@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم الأرقام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🔢 تعلم الأرقام الإنجليزية</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 الرئيسية</a></li>
+            <li><a href="letters.html">🔤 الحروف</a></li>
+            <li><a href="numbers.html">🔢 الأرقام</a></li>
+            <li><a href="game.html">🎮 اللعبة</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="number-container">
+            <!-- إنشاء أزرار لجميع الأرقام -->
+            <script>
+                for (let i = 1; i <= 10; i++) {
+                    document.write(`<button onclick="playSound('${i}')">${i}</button>`);
+                }
+            </script>
+        </div>
+    </main>
+
+    <audio id="audio"></audio>
+
+    <script>
+        function playSound(number) {
+            document.getElementById('audio').src = `media/sounds/${number}.mp3`;
+            document.getElementById('audio').play();
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+/* خلفية ملونة ومبهجة */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* تحسين تصميم الهيدر */
+header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid white;
+}
+
+/* إضافة تصميم للشعار */
+.logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* تحسين تصميم الأزرار */
+.menu {
+    margin-top: 50px;
+}
+
+.btn {
+    background: #ffcc00;
+    border: none;
+    padding: 15px 30px;
+    font-size: 22px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff9900;
+    transform: scale(1.1);
+}
+
+

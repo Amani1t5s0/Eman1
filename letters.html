@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم الحروف</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🔤 تعلم الحروف الإنجليزية</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 الرئيسية</a></li>
+            <li><a href="letters.html">🔤 الحروف</a></li>
+            <li><a href="numbers.html">🔢 الأرقام</a></li>
+            <li><a href="game.html">🎮 اللعبة</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="letter-container">
+            <!-- إنشاء أزرار لجميع الحروف -->
+            <script>
+                const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+                document.write(letters.map(letter => 
+                    `<button onclick="playSound('${letter}')">${letter}</button>`
+                ).join(' '));
+            </script>
+        </div>
+    </main>
+
+    <audio id="audio"></audio>
+
+    <script>
+        function playSound(letter) {
+            document.getElementById('audio').src = `media/sounds/${letter}.mp3`;
+            document.getElementById('audio').play();
+        }
+    </script>
+
+</body>
+</html>
+
